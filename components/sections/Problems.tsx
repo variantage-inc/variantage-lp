@@ -9,9 +9,9 @@ const PROBLEMS = [
 
 export default function Problems() {
   return (
-    <section className="w-full">
-      <div className="w-full bg-[linear-gradient(45deg,_#09182B_0%,_#112C4E_100%)]">
-        <div className="mx-auto flex max-w-[1440px] pl-10">
+    <section id="problems" className="w-full">
+      <div className="relative w-full bg-[linear-gradient(45deg,_#09182B_0%,_#112C4E_100%)]">
+        <div className="relative z-10 mx-auto max-w-[1440px] pl-10">
           <div className="flex flex-col pt-[47px] pb-[110px]">
             <p className="w-[694px] font-[family-name:var(--font-poppins)] text-[39.411px] font-light leading-[47px] tracking-[-1.1823px] text-[#ADD6FF]">
               If you’ve ever felt lost or overwhelmed with social media and
@@ -34,20 +34,19 @@ export default function Problems() {
               ))}
             </ol>
           </div>
-
-          <div className="relative flex-1">
-            <Image
-              src="/images/men-looking-at-laptop.png"
-              alt=""
-              fill
-              className="object-contain object-right"
-            />
-          </div>
         </div>
+
+        <Image
+          src="/images/demofile1.webp"
+          alt="happy man with variantage"
+          width={950}
+          height={970}
+          className="absolute right-0 bottom-[-40px] z-0"
+        />
       </div>
 
       <div className="w-full bg-[#071627]">
-        <div className="mx-auto flex h-[146px] max-w-[1440px] items-center justify-between px-10">
+        <div className="relative z-10 mx-auto flex h-[146px] max-w-[1440px] items-center justify-between px-10">
           <p className="font-[family-name:var(--font-poppins)] text-[39.411px] font-light leading-[47px] tracking-[-1.1823px] text-[#ADD6FF]">
             At Variantage, we cover all of this for you
           </p>

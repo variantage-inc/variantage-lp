@@ -46,8 +46,8 @@ const INDUSTRIES = [
 
 export default function Industries() {
   return (
-    <section className="w-full bg-[#ECF8FA]">
-      <div className="mx-auto flex max-w-[1440px] flex-col items-center px-10 pt-[61px] pb-[109px]">
+    <section id="industries" className="w-full bg-[#ECF8FA]">
+      <div className="mx-auto flex max-w-[1440px] flex-col items-center px-10 pt-[61px] pb-[380px]">
         <h2 className="font-[family-name:var(--font-poppins)] text-center text-[#1C304B] tracking-[-1.08px]">
           <span className="block text-[36px] font-normal leading-normal">
             Work we do

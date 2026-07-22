@@ -5,7 +5,7 @@ const PHONE_NUMBER = "+1 647 250 7504";
 
 export default function Header() {
   return (
-    <header className="w-full bg-[#E2F4FF]">
+    <header id="header" className="w-full bg-[#E2F4FF]">
       <div className="mx-auto flex h-[167px] max-w-[1440px] items-center justify-between px-10">
         <Image
           src="/images/Variantage-logo-branding-page.svg"

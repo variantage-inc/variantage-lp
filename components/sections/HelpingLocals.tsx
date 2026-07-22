@@ -5,7 +5,7 @@ const CITIES = ["Toronto", "Markham", "Whitby", "Saskatchewan", "Other Cities"];
 
 export default function HelpingLocals() {
   return (
-    <section className="w-full bg-gradient-to-b from-[#E2F4FF] from-[2.582%] to-[#FAFCFE]">
+    <section id="helping-locals" className="w-full bg-gradient-to-b from-[#E2F4FF] from-[2.582%] to-[#FAFCFE]">
       <div className="mx-auto flex max-w-[1440px] flex-col items-center gap-[43px] px-10 pt-[47px] pb-[62px] text-center">
         <h2 className="font-[family-name:var(--font-poppins)] text-[33px] font-medium leading-[59px] tracking-[-0.99px] text-[#171414]">
           Helping Local Businesses Across Canada
