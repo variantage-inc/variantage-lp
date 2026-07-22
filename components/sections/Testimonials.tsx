@@ -50,37 +50,36 @@ const TESTIMONIALS: Testimonial[] = [
 ];
 
 const CARD_WIDTH = 416.65;
-const CARD_GAP = 44;
+const CARD_GAP = 45;
 const VISIBLE_CARDS = 3;
 const PAGE_COUNT = TESTIMONIALS.length - VISIBLE_CARDS + 1;
+const CAROUSEL_WIDTH = CARD_WIDTH * VISIBLE_CARDS + CARD_GAP * (VISIBLE_CARDS - 1);
 
 function TestimonialCard({ name, role, quote }: Testimonial) {
   return (
-    <div
-      className="relative h-[282px] w-[416.65px] shrink-0 overflow-hidden rounded-[8px] bg-white shadow-[0px_0px_22px_-9px_rgba(0,0,0,0.25)]"
-    >
+    <div className="relative h-[282px] w-[416.65px] shrink-0 overflow-hidden rounded-[15px] bg-white shadow-[0px_0px_22px_-9px_rgba(0,0,0,0.25)]">
       <span
-        className={`${pontanoSans.className} absolute top-0 left-[21px] text-[77px] leading-none tracking-[-2.31px] text-[#DAB234]`}
+        className={`${pontanoSans.className} absolute top-0 left-[21px] text-[104px] leading-none tracking-[-3.12px] text-[#DAB234]`}
       >
         &ldquo;
       </span>
 
-      <div className="absolute top-[30px] left-[129px] flex">
+      <div className="absolute top-[43px] left-[53px] flex">
         {Array.from({ length: 5 }).map((_, i) => (
           <span
             key={i}
             className="flex h-[25px] w-[25px] items-center justify-center"
           >
-            <Star className="h-[19px] w-[19px] fill-[#DAB234] text-[#DAB234]" />
+            <Star className="h-[20px] w-[20px] fill-[#DAB234] text-[#DAB234]" />
           </span>
         ))}
       </div>
 
-      <p className="absolute top-[68px] left-[129px] w-[264px] font-[family-name:var(--font-poppins)] text-[16px] leading-normal tracking-[-0.48px] text-black">
+      <p className="absolute top-[88px] left-[54px] w-[322px] font-[family-name:var(--font-poppins)] text-[14px] leading-normal tracking-[-0.42px] text-black">
         {quote}
       </p>
 
-      <div className="absolute top-[189px] left-[129px]">
+      <div className="absolute top-[188px] left-[54px]">
         <p className="font-[family-name:var(--font-poppins)] text-[18px] leading-normal font-bold tracking-[-0.54px] text-black">
           {name}
         </p>
@@ -96,15 +95,22 @@ export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
 
   return (
-    <section id="testimonials" className="w-full bg-[ok ev#F3F6FC]">
-      <div className="mx-auto max-w-[1440px] px-10 pt-[56px] pb-[62px]">
+    <section id="testimonials" className="w-full bg-[#ECF8FA]">
+      <div className="mx-auto max-w-[1440px] px-10 pt-[100px] pb-[100px]">
         <h2 className="text-center font-[family-name:var(--font-poppins)] text-[39px] leading-[58px] font-bold tracking-[-1.17px] text-[#142539]">
-          What Our Clients Say !
+          Why Local Businesses Rate Us 5 Stars
         </h2>
+        <p className="mt-[14px] text-center font-[family-name:var(--font-poppins)] text-[17px] leading-normal tracking-[-0.51px] text-black">
+          Don&apos;t just take our word for it — here&apos;s what real clients
+          say about working with us.
+        </p>
 
-        <div className="mt-[25px] mx-auto w-[1337.95px] overflow-hidden">
+        <div
+          className="mt-[48px] mx-auto overflow-hidden"
+          style={{ width: `${CAROUSEL_WIDTH}px` }}
+        >
           <div
-            className="flex gap-[44px] transition-transform duration-500 ease-in-out"
+            className="flex gap-[45px] transition-transform duration-500 ease-in-out"
             style={{
               transform: `translateX(-${activeIndex * (CARD_WIDTH + CARD_GAP)}px)`,
             }}
@@ -128,6 +134,20 @@ export default function Testimonials() {
               }`}
             />
           ))}
+        </div>
+
+        <div className="mt-[36px] flex justify-center">
+          <a
+            href="https://share.google/1XPj66iUVSEErvlp5"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex items-center gap-[6px] font-[family-name:var(--font-poppins)] text-[15px] font-medium tracking-[-0.3px] text-[#142539] transition-colors hover:text-[#C11F24]"
+          >
+            Read more reviews on Google
+            <span className="transition-transform group-hover:translate-x-[3px]">
+              →
+            </span>
+          </a>
         </div>
       </div>
     </section>
