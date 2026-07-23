@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Netlify Forms Detection</title>
+  </head>
+  <body>
+    <!-- This file exists only for Netlify form detection. It is not linked or rendered. -->
+    <form name="Lead Form" method="POST" data-netlify="true">
+      <input type="hidden" name="form-name" value="Lead Form" />
+
+      <input type="text" name="fullName" />
+      <input type="tel" name="contactNumber" />
+      <input type="email" name="email" />
+      <input type="text" name="businessName" />
+
+      <input type="radio" name="hasWebsite" value="yes" />
+      <input type="radio" name="hasWebsite" value="no" />
+      <input type="url" name="websiteUrl" />
+
+      <textarea name="businessDescription"></textarea>
+
+      <input type="radio" name="contactMethod" value="phone" />
+      <input type="radio" name="contactMethod" value="whatsapp" />
+      <input type="radio" name="contactMethod" value="email" />
+
+      <input type="checkbox" name="newsletterOptIn" />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

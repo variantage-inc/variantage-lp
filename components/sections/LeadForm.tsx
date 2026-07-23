@@ -1,7 +1,43 @@
+"use client";
+
+import { useState, type FormEvent } from "react";
+
 const RADIO_CLASS =
   "size-[28px] shrink-0 appearance-none rounded-full border-2 border-black bg-white outline-none checked:border-[7px] checked:border-[#C01F25]";
 
+type SubmitStatus = "idle" | "success" | "error";
+
 export default function LeadForm() {
+  const [status, setStatus] = useState<SubmitStatus>("idle");
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    const form = event.currentTarget;
+    const entries = Array.from(new FormData(form).entries()) as [
+      string,
+      string,
+    ][];
+    const data = new URLSearchParams(entries);
+
+    try {
+      const response = await fetch("/__forms.html", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: data.toString(),
+      });
+
+      if (!response.ok) {
+        throw new Error("Form submission failed");
+      }
+
+      form.reset();
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
+  }
+
   return (
     <section id="lead-form" className="w-full bg-[#FAFCFE]">
       <div className="relative mx-auto h-[1853px] max-w-[1440px]">
@@ -25,6 +61,7 @@ export default function LeadForm() {
           name="Lead Form"
           data-netlify="true"
           className="contents"
+          onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="Lead Form" />
 
@@ -191,6 +228,18 @@ export default function LeadForm() {
               Let&apos;s Build Your Brand Together &gt;
             </span>
           </button>
+
+          {status === "success" && (
+            <p className="absolute top-[1706px] left-[121px] font-[family-name:var(--font-poppins)] text-[22px] text-green-600">
+              Thank you! Your request has been received.
+            </p>
+          )}
+
+          {status === "error" && (
+            <p className="absolute top-[1706px] left-[121px] font-[family-name:var(--font-poppins)] text-[22px] text-[#C01F25]">
+              Something went wrong. Please try again.
+            </p>
+          )}
         </form>
       </div>
     </section>
