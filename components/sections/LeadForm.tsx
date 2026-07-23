@@ -20,7 +20,14 @@ export default function LeadForm() {
           </span>
         </p>
 
-        <form className="contents">
+        <form
+          method="POST"
+          name="Lead Form"
+          data-netlify="true"
+          className="contents"
+        >
+          <input type="hidden" name="form-name" value="Lead Form" />
+
           <h3 className="absolute top-[341px] left-[121px] font-[family-name:var(--font-poppins)] text-[30px] leading-[32px] font-bold tracking-[-0.9px] text-[#C01F25]">
             Contact Details
           </h3>
