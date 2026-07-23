@@ -18,34 +18,34 @@ type Testimonial = {
 
 const TESTIMONIALS: Testimonial[] = [
   {
-    name: "John D.",
-    role: "Marketing Manager",
+    name: "Cathy M.",
+    role: "Gemelit",
     quote:
-      "Our new branding helped us attract more premium clients. The team made the whole process simple from start to finish.",
+      "Variantage transformed our social media with premium, elegant designs that truly showcase our jewelry and cosmetics. Mujtaba treated our brand like his own, bringing creativity, professionalism, and attention to every detail. I highly recommend them to any business looking to build a stronger online presence.",
   },
   {
-    name: "Sarah L.",
-    role: "Business Owner",
+    name: "Jason B.",
+    role: "ViPhy Corp.",
     quote:
-      "Working with this team completely changed how customers find us online. Bookings have gone up every month since launch.",
+      "Variantage turned our vision into a professional healthcare brand and designed an outstanding patient management platform with an exceptional mobile experience. Mujtaba and Atif have been incredible partners throughout the journey. We highly recommend them for branding, UI/UX, and digital product development.",
   },
   {
-    name: "Michael R.",
-    role: "Operations Manager",
+    name: "Rita S.",
+    role: "Relax N Glow Spa",
     quote:
-      "Our new branding helped us attract more premium clients. Our new branding helped us attract more customers overall.",
+      "Variantage completely elevated our online presence through Google optimization, social media, and creative marketing campaigns. We've seen more inquiries, new clients, and stronger visibility since working together. Their creativity, consistency, and genuine support have been outstanding.",
   },
   {
-    name: "Emily S.",
-    role: "Clinic Director",
+    name: "Syed A.",
+    role: "Bongi UK",
     quote:
-      "The website and marketing support gave our clinic a professional presence that patients trust from the first visit.",
+      "We've worked with Variantage for over seven years across multiple web development and branding projects. They consistently deliver professional, cost-effective solutions with exceptional quality. A reliable team I would confidently recommend to any business.",
   },
   {
-    name: "David K.",
-    role: "Restaurant Owner",
+    name: "Daisy & R.",
+    role: "Daisy Family Wellness",
     quote:
-      "Our online reviews and reservations improved right away. It's been a great partnership for growing our restaurant.",
+      "Variantage has been our trusted marketing partner for over two years, handling everything from our website and digital marketing to signage and print materials. Their team is responsive, dependable, and makes managing our brand effortless. We couldn't ask for a better partner.",
   },
 ];
 
@@ -57,7 +57,7 @@ const CAROUSEL_WIDTH = CARD_WIDTH * VISIBLE_CARDS + CARD_GAP * (VISIBLE_CARDS - 
 
 function TestimonialCard({ name, role, quote }: Testimonial) {
   return (
-    <div className="relative h-[282px] w-[416.65px] shrink-0 overflow-hidden rounded-[15px] bg-white shadow-[0px_0px_22px_-9px_rgba(0,0,0,0.25)]">
+    <div className="relative flex h-[360px] w-[416.65px] shrink-0 flex-col overflow-hidden rounded-[15px] bg-white shadow-[0px_0px_22px_-9px_rgba(0,0,0,0.25)]">
       <span
         className={`${pontanoSans.className} absolute top-0 left-[21px] text-[104px] leading-none tracking-[-3.12px] text-[#DAB234]`}
       >
@@ -75,17 +75,19 @@ function TestimonialCard({ name, role, quote }: Testimonial) {
         ))}
       </div>
 
-      <p className="absolute top-[88px] left-[54px] w-[322px] font-[family-name:var(--font-poppins)] text-[14px] leading-normal tracking-[-0.42px] text-black">
-        {quote}
-      </p>
+      <div className="flex h-full flex-col pt-[88px] pr-[40px] pb-[32px] pl-[54px]">
+        <p className="font-[family-name:var(--font-poppins)] text-[13px] leading-[1.6] font-normal tracking-[-0.39px] text-black">
+          {quote}
+        </p>
 
-      <div className="absolute top-[188px] left-[54px]">
-        <p className="font-[family-name:var(--font-poppins)] text-[18px] leading-normal font-bold tracking-[-0.54px] text-black">
-          {name}
-        </p>
-        <p className="font-[family-name:var(--font-poppins)] text-[14px] leading-normal tracking-[-0.42px] text-black">
-          {role}
-        </p>
+        <div className="mt-auto pt-[16px]">
+          <p className="font-[family-name:var(--font-poppins)] text-[18px] leading-normal font-bold tracking-[-0.54px] text-black">
+            {name}
+          </p>
+          <p className="font-[family-name:var(--font-poppins)] text-[14px] leading-normal tracking-[-0.42px] text-black">
+            {role}
+          </p>
+        </div>
       </div>
     </div>
   );

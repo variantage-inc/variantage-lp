@@ -5,6 +5,7 @@ import BrandingSolutions from "@/components/sections/BrandingSolutions";
 import Industries from "@/components/sections/Industries";
 import Problems from "@/components/sections/Problems";
 import Testimonials from "@/components/sections/Testimonials";
+import LeadForm from "@/components/sections/LeadForm";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <Industries />
       <Problems />
       <Testimonials />
+      <LeadForm />
     </main>
   );
 }

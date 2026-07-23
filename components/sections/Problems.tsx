@@ -52,11 +52,11 @@ export default function Problems() {
           </p>
 
           <a
-            href="#contact"
+            href="#lead-form"
             className="flex h-[88px] w-[366px] items-center justify-center gap-[10px] rounded-[8px] bg-[#C11F24] px-[31px] py-[12px] hover:bg-[#A1181C]"
           >
             <span className="font-[family-name:var(--font-poppins)] text-[20px] font-bold text-white">
-              Book Free Consultation
+              Book a Free Consultation
             </span>
             <ChevronRight className="h-[30px] w-5 text-white" strokeWidth={3} />
           </a>

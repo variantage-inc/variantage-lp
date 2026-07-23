@@ -9,14 +9,14 @@ const inter = Inter({
 
 const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["300", "500"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-poppins",
   display: "swap",
 });
 
 export const metadata: Metadata = {
   title: "Variantage",
-  description: "Digital growth partner for local businesses inCanada.",
+  description: "Digital growth partner for local businesses in Canada.",
 };
 
 export default function RootLayout({
