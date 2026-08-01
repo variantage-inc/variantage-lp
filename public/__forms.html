@@ -6,8 +6,14 @@
   </head>
   <body>
     <!-- This file exists only for Netlify form detection. It is not linked or rendered. -->
-    <form name="Lead Form" method="POST" data-netlify="true">
+    <form
+      name="Lead Form"
+      method="POST"
+      data-netlify="true"
+      data-netlify-honeypot="bot-field"
+    >
       <input type="hidden" name="form-name" value="Lead Form" />
+      <input name="bot-field" />
 
       <input type="text" name="fullName" />
       <input type="tel" name="contactNumber" />

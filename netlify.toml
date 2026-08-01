@@ -1,0 +1,5 @@
+[build]
+  command = "npm run build"
+  # Must not be the repo root, or @netlify/plugin-nextjs fails its onBuild step.
+  # ".next" is Next's default build output (no custom distDir in next.config.ts).
+  publish = ".next"

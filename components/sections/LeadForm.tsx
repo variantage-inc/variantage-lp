@@ -28,12 +28,18 @@ export default function LeadForm() {
       });
 
       if (!response.ok) {
-        throw new Error("Form submission failed");
+        // 404 here means Netlify never registered the form, so it did not
+        // intercept the POST and Next.js handled it as an unknown route.
+        // Check that form detection is enabled, then redeploy.
+        throw new Error(
+          `Netlify form submission failed: ${response.status} ${response.statusText}`,
+        );
       }
 
       form.reset();
       setStatus("success");
-    } catch {
+    } catch (error) {
+      console.error(error);
       setStatus("error");
     }
   }
@@ -60,10 +66,25 @@ export default function LeadForm() {
           method="POST"
           name="Lead Form"
           data-netlify="true"
+          data-netlify-honeypot="bot-field"
           className="contents"
           onSubmit={handleSubmit}
         >
           <input type="hidden" name="form-name" value="Lead Form" />
+
+          {/*
+            Honeypot. Hidden from people, so a real submission leaves it empty.
+            Bots fill every field they find, and Netlify discards any submission
+            where this one is non-empty. Kept identical to public/__forms.html —
+            both files are detected as the form named "Lead Form", so their
+            field definitions must match.
+          */}
+          <p className="hidden">
+            <label>
+              Do not fill this out if you are human:{" "}
+              <input name="bot-field" tabIndex={-1} autoComplete="off" />
+            </label>
+          </p>
 
           <h3 className="absolute top-[341px] left-[121px] font-[family-name:var(--font-poppins)] text-[30px] leading-[32px] font-bold tracking-[-0.9px] text-[#C01F25]">
             Contact Details
