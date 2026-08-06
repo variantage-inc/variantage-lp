@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Pontano_Sans } from "next/font/google";
 import { Star } from "lucide-react";
 
@@ -57,7 +57,7 @@ const CAROUSEL_WIDTH = CARD_WIDTH * VISIBLE_CARDS + CARD_GAP * (VISIBLE_CARDS - 
 
 function TestimonialCard({ name, role, quote }: Testimonial) {
   return (
-    <div className="relative flex h-[360px] w-[416.65px] shrink-0 flex-col overflow-hidden rounded-[15px] bg-white shadow-[0px_0px_22px_-9px_rgba(0,0,0,0.25)]">
+    <div className="relative flex h-auto w-full shrink-0 flex-col overflow-hidden rounded-[15px] bg-white shadow-[0px_0px_22px_-9px_rgba(0,0,0,0.25)] lg:h-[360px] lg:w-[416.65px]">
       <span
         className={`${pontanoSans.className} absolute top-0 left-[21px] text-[104px] leading-none tracking-[-3.12px] text-[#DAB234]`}
       >
@@ -96,9 +96,46 @@ function TestimonialCard({ name, role, quote }: Testimonial) {
 export default function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
 
+  const [mobileActiveIndex, setMobileActiveIndex] = useState(0);
+  const mobileScrollRef = useRef<HTMLDivElement | null>(null);
+  const mobileSlideRefs = useRef<(HTMLDivElement | null)[]>([]);
+
+  useEffect(() => {
+    const root = mobileScrollRef.current;
+    if (!root) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.6) {
+            const index = Number(
+              (entry.target as HTMLElement).dataset.index,
+            );
+            if (!Number.isNaN(index)) setMobileActiveIndex(index);
+          }
+        });
+      },
+      { root, threshold: 0.6 },
+    );
+
+    mobileSlideRefs.current.forEach((slide) => {
+      if (slide) observer.observe(slide);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  const scrollToMobileSlide = (index: number) => {
+    mobileSlideRefs.current[index]?.scrollIntoView({
+      behavior: "smooth",
+      inline: "start",
+      block: "nearest",
+    });
+  };
+
   return (
     <section id="testimonials" className="w-full bg-[#ECF8FA]">
-      <div className="mx-auto max-w-[1440px] px-10 pt-[100px] pb-[100px]">
+      <div className="mx-auto max-w-[1440px] px-5 pt-[100px] pb-[100px] md:px-8 lg:px-10">
         <h2 className="text-center font-[family-name:var(--font-poppins)] text-[39px] leading-[58px] font-bold tracking-[-1.17px] text-[#142539]">
           Why Local Businesses Rate Us 5 Stars
         </h2>
@@ -107,35 +144,74 @@ export default function Testimonials() {
           say about working with us.
         </p>
 
-        <div
-          className="mt-[48px] mx-auto overflow-hidden"
-          style={{ width: `${CAROUSEL_WIDTH}px` }}
-        >
+        {/* Mobile & tablet: swipeable carousel (one card on mobile, two on tablet) */}
+        <div className="lg:hidden">
           <div
-            className="flex gap-[45px] transition-transform duration-500 ease-in-out"
-            style={{
-              transform: `translateX(-${activeIndex * (CARD_WIDTH + CARD_GAP)}px)`,
-            }}
+            ref={mobileScrollRef}
+            className="mt-[48px] flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-smooth [-webkit-overflow-scrolling:touch] [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
           >
-            {TESTIMONIALS.map((testimonial) => (
-              <TestimonialCard key={testimonial.name} {...testimonial} />
+            {TESTIMONIALS.map((testimonial, i) => (
+              <div
+                key={testimonial.name}
+                ref={(el) => {
+                  mobileSlideRefs.current[i] = el;
+                }}
+                data-index={i}
+                className="w-[92%] shrink-0 snap-center snap-always md:w-[calc(50%-8px)] md:snap-start md:snap-normal"
+              >
+                <TestimonialCard {...testimonial} />
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-[54px] flex items-center justify-center gap-[13px]">
+            {TESTIMONIALS.map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                aria-label={`Go to testimonial ${i + 1}`}
+                aria-current={i === mobileActiveIndex}
+                onClick={() => scrollToMobileSlide(i)}
+                className={`size-[14px] rounded-full border-2 border-[#142539] transition-colors ${
+                  i === mobileActiveIndex ? "bg-[#142539]" : "bg-white"
+                }`}
+              />
             ))}
           </div>
         </div>
 
-        <div className="mt-[54px] flex items-center justify-center gap-[13px]">
-          {Array.from({ length: PAGE_COUNT }).map((_, i) => (
-            <button
-              key={i}
-              type="button"
-              aria-label={`Show testimonials ${i + 1} to ${i + VISIBLE_CARDS}`}
-              aria-current={i === activeIndex}
-              onClick={() => setActiveIndex(i)}
-              className={`size-[14px] rounded-full border-2 border-[#142539] transition-colors ${
-                i === activeIndex ? "bg-[#142539]" : "bg-white"
-              }`}
-            />
-          ))}
+        {/* Desktop: original fixed-width transform carousel, unchanged */}
+        <div className="hidden lg:block">
+          <div
+            className="mt-[48px] mx-auto overflow-hidden"
+            style={{ width: `${CAROUSEL_WIDTH}px` }}
+          >
+            <div
+              className="flex gap-[45px] transition-transform duration-500 ease-in-out"
+              style={{
+                transform: `translateX(-${activeIndex * (CARD_WIDTH + CARD_GAP)}px)`,
+              }}
+            >
+              {TESTIMONIALS.map((testimonial) => (
+                <TestimonialCard key={testimonial.name} {...testimonial} />
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-[54px] flex items-center justify-center gap-[13px]">
+            {Array.from({ length: PAGE_COUNT }).map((_, i) => (
+              <button
+                key={i}
+                type="button"
+                aria-label={`Show testimonials ${i + 1} to ${i + VISIBLE_CARDS}`}
+                aria-current={i === activeIndex}
+                onClick={() => setActiveIndex(i)}
+                className={`size-[14px] rounded-full border-2 border-[#142539] transition-colors ${
+                  i === activeIndex ? "bg-[#142539]" : "bg-white"
+                }`}
+              />
+            ))}
+          </div>
         </div>
 
         <div className="mt-[36px] flex justify-center">
