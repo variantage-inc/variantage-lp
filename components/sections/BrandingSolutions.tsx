@@ -46,33 +46,36 @@ const SOLUTIONS = [
 export default function BrandingSolutions() {
   return (
     <section id="branding-solutions" className="w-full bg-[#e5fbff]">
-      <div className="mx-auto flex max-w-[1440px] flex-col items-center px-10 pt-[59px] pb-[64px]">
-        <h2 className="font-[family-name:var(--font-poppins)] text-center text-[#1C304B] tracking-[-1.08px]">
-          <span className="block text-[36px] font-normal leading-normal">
+      <div className="mx-auto flex max-w-[1440px] flex-col items-center px-5 pt-10 pb-12 sm:px-6 md:px-8 md:pt-12 md:pb-14 lg:px-10 lg:pt-[59px] lg:pb-[64px]">
+        <h2 className="font-[family-name:var(--font-poppins)] text-center text-[#1C304B] tracking-[-0.5px] md:tracking-[-0.8px] lg:tracking-[-1.08px]">
+          <span className="block text-[22px] font-normal leading-snug md:text-[28px] md:leading-normal lg:text-[36px] lg:leading-normal">
             Elevate Your Business with
           </span>
-          <span className="block text-[61px] font-bold leading-[0.995]">
+          <span className="block text-[32px] font-bold leading-tight md:text-[44px] md:leading-[1.1] lg:text-[61px] lg:leading-[0.995]">
             Our Branding Solutions
           </span>
         </h2>
 
-        <ul className="mt-[88px] flex w-full items-start justify-between">
+        <ul className="mt-10 grid w-full grid-cols-1 gap-y-10 md:mt-14 md:grid-cols-2 md:gap-x-8 md:gap-y-12 lg:mt-[88px] lg:flex lg:gap-0 lg:items-start lg:justify-between">
           {SOLUTIONS.map((solution) => (
-            <li key={solution.title} className="flex flex-col items-start">
-              <div className="flex h-[126px] items-end">
+            <li
+              key={solution.title}
+              className="flex flex-col items-center text-center lg:items-start lg:text-left"
+            >
+              <div className="flex h-[70px] items-end sm:h-[80px] md:h-[100px] lg:h-[126px]">
                 <Image
                   src={solution.icon}
                   alt=""
                   width={solution.width}
                   height={solution.height}
-                  className="mix-blend-multiply"
+                  className="mix-blend-multiply h-auto w-14 sm:w-16 md:w-20 lg:h-auto lg:w-auto"
                 />
               </div>
-              <h3 className="mt-[9px] font-[family-name:var(--font-poppins)] text-[24px] font-bold leading-normal tracking-[-0.72px] text-[#C01F25]">
+              <h3 className="mt-2 font-[family-name:var(--font-poppins)] text-[18px] font-bold leading-normal tracking-[-0.4px] text-[#C01F25] md:text-[20px] md:tracking-[-0.5px] lg:mt-[9px] lg:text-[24px] lg:tracking-[-0.72px]">
                 {solution.title}
               </h3>
               <p
-                className="mt-[23px] font-[family-name:var(--font-poppins)] text-[17px] font-normal leading-normal tracking-[-0.51px] text-black"
+                className="mt-3 max-w-full font-[family-name:var(--font-poppins)] text-[14px] font-normal leading-normal tracking-[-0.3px] text-black md:text-[15px] md:tracking-[-0.4px] lg:mt-[23px] lg:text-[17px] lg:tracking-[-0.51px]"
                 style={{ width: solution.descriptionWidth }}
               >
                 {solution.description}
