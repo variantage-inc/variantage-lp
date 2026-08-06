@@ -2,6 +2,7 @@ import Header from "@/components/layout/Header";
 import Hero from "@/components/sections/Hero";
 import HelpingLocals from "@/components/sections/HelpingLocals";
 import BrandingSolutions from "@/components/sections/BrandingSolutions";
+import ClientShowcase from "@/components/sections/ClientShowcase";
 import Industries from "@/components/sections/Industries";
 import Problems from "@/components/sections/Problems";
 import Testimonials from "@/components/sections/Testimonials";
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <HelpingLocals />
       <BrandingSolutions />
+      <ClientShowcase />
       <Industries />
       <Problems />
       <Testimonials />
