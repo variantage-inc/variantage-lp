@@ -20,9 +20,9 @@ const INDUSTRIES = [
     title: "Automotive",
   },
   {
-    icon: "/images/4-healthcare.svg",
+    icon: "/images/4-healthcareb.svg",
     width: 59,
-    height: 50,
+    height: 59,
     title: "Health Care",
   },
   {
@@ -30,6 +30,12 @@ const INDUSTRIES = [
     width: 63,
     height: 60,
     title: "Real Estate",
+  },
+  {
+    icon: "/images/6restaurants.svg",
+    width: 68,
+    height: 68,
+    title: "Restaurants",
   },
 ];
 

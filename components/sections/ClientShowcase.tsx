@@ -48,7 +48,7 @@ export default function ClientShowcase() {
           </span>
         </h2>
 
-        <ul className="mt-8 grid w-full grid-cols-2 gap-x-4 gap-y-4 md:mt-10 md:grid-cols-3 lg:mt-[55px] lg:grid-cols-4 lg:gap-x-[17px] lg:gap-y-[14px]">
+        <ul className="mt-8 grid w-full grid-cols-2 gap-x-4 gap-y-4 md:mt-10 md:grid-cols-3 lg:mt-[55px] lg:gap-x-[17px] lg:gap-y-[14px] xl:grid-cols-4">
           {PARTNER_LOGOS.map((client) => (
             <li
               key={client.logo}
