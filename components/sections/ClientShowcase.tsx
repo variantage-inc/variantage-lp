@@ -38,24 +38,30 @@ const PARTNER_LOGOS = [
 export default function ClientShowcase() {
   return (
     <section id="client-showcase" className="w-full bg-[#e5fbff]">
-      <div className="mx-auto flex max-w-[1440px] flex-col items-center px-10 pt-[61px]">
-        <h2 className="font-[family-name:var(--font-poppins)] text-center text-[#1C304B] tracking-[-1.08px]">
-          <span className="block text-[36px] font-normal leading-normal">
+      <div className="mx-auto flex max-w-[1440px] flex-col items-center px-5 pt-10 sm:px-6 md:px-8 md:pt-12 lg:px-10 lg:pt-[61px]">
+        <h2 className="font-[family-name:var(--font-poppins)] text-center text-[#1C304B] tracking-[-0.5px] md:tracking-[-0.8px] lg:tracking-[-1.08px]">
+          <span className="block text-[22px] font-normal leading-snug md:text-[28px] md:leading-normal lg:text-[36px] lg:leading-normal">
             Work we do
           </span>
-          <span className="block text-[61px] font-bold leading-[0.995]">
+          <span className="block text-[32px] font-bold leading-tight md:text-[44px] md:leading-[1.1] lg:text-[61px] lg:leading-[0.995]">
             Client in showcase
           </span>
         </h2>
 
-        <ul className="mt-[55px] grid w-full grid-cols-4 gap-x-[17px] gap-y-[14px]">
+        <ul className="mt-8 grid w-full grid-cols-2 gap-x-4 gap-y-4 md:mt-10 md:grid-cols-3 lg:mt-[55px] lg:grid-cols-4 lg:gap-x-[17px] lg:gap-y-[14px]">
           {PARTNER_LOGOS.map((client) => (
             <li
               key={client.logo}
               className="flex h-[160px] w-full flex-col overflow-hidden rounded-[8px] bg-white"
             >
-              <div className="flex flex-1 items-center justify-center">
-                <Image src={client.logo} alt="" width={241} height={124} />
+              <div className="flex flex-1 items-center justify-center px-4">
+                <Image
+                  src={client.logo}
+                  alt=""
+                  width={241}
+                  height={124}
+                  className="h-auto w-full max-w-[241px]"
+                />
               </div>
               <a
                 href={client.website}
