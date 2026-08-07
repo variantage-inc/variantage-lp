@@ -7,6 +7,7 @@ import Industries from "@/components/sections/Industries";
 import Problems from "@/components/sections/Problems";
 import Testimonials from "@/components/sections/Testimonials";
 import LeadForm from "@/components/sections/LeadForm";
+import Footer from "@/components/layout/Footer";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <Problems />
       <Testimonials />
       <LeadForm />
+      <Footer />
     </main>
   );
 }
