@@ -10,7 +10,7 @@ const PROBLEMS = [
 export default function Problems() {
   return (
     <section id="problems" className="w-full">
-      <div className="relative flex w-full flex-col bg-[linear-gradient(45deg,_#09182B_0%,_#112C4E_100%)] lg:block">
+      <div className="relative flex w-full flex-col bg-[linear-gradient(45deg,_#09182B_0%,_#112C4E_100%)] lg:block lg:min-h-[970px]">
         <div className="relative z-10 order-2 mx-auto max-w-[1440px] px-5 sm:px-6 md:px-8 lg:order-none lg:pl-10 lg:pr-0">
           <div className="flex flex-col pt-8 pb-8 sm:pt-9 sm:pb-9 md:pt-10 md:pb-10 lg:pt-[47px] lg:pb-[110px]">
             <p className="max-w-full font-[family-name:var(--font-poppins)] text-[22px] font-light leading-[30px] tracking-[-0.5px] text-[#ADD6FF] sm:text-[25px] sm:leading-[33px] md:text-[28px] md:leading-[36px] md:tracking-[-0.8px] lg:w-[694px] lg:max-w-none lg:text-[39.411px] lg:leading-[47px] lg:tracking-[-1.1823px]">

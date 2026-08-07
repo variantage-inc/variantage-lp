@@ -48,7 +48,7 @@ export default function Hero() {
     <section id="hero" className="relative w-full bg-[#E2F4FF]">
       <div className="relative mx-auto flex w-full max-w-[1440px] flex-col gap-8 px-5 py-14 sm:gap-10 sm:px-8 sm:py-16 md:px-12 md:py-20 lg:px-16 xl:block xl:h-[959px] xl:gap-0 xl:px-0 xl:py-0">
         <p className="order-1 font-[family-name:var(--font-poppins)] text-sm leading-normal font-normal tracking-[-0.3px] text-[#C01F25] uppercase sm:text-base md:text-lg xl:absolute xl:top-[25px] xl:left-[13px] xl:order-none xl:text-[24px] xl:leading-[73px] xl:tracking-[-0.72px]">
-          For Small Businesses In Canada
+          FOR SMALL BUSINESSES ACROSS ONTARIO
         </p>
 
         <h1 className="order-2 w-full font-[family-name:var(--font-poppins)] text-4xl leading-tight font-bold tracking-tight text-[#142539] sm:text-5xl md:text-6xl lg:text-[56px] xl:absolute xl:top-[98px] xl:left-[11px] xl:order-none xl:w-[1052px] xl:text-[64.883px] xl:leading-[75px] xl:tracking-[-1.9465px]">
@@ -56,8 +56,7 @@ export default function Hero() {
         </h1>
 
         <p className="order-3 w-full font-[family-name:var(--font-poppins)] text-lg leading-normal font-normal tracking-normal text-[#142539] sm:text-xl md:text-2xl lg:text-[26px] xl:absolute xl:top-[295px] xl:left-[13px] xl:order-none xl:w-[654px] xl:text-[30.411px] xl:leading-[43px] xl:tracking-[-0.9123px]">
-          Professional branding kits for small businesses across Canada. Build
-          credibility, attract customers, and stand out from competitors.
+          Everything your business needs to build a stronger brand online from professional branding and websites to a polished digital presence that earns trust and attracts more customers.
         </p>
 
         <ul className="order-5 flex w-full flex-col gap-1 xl:absolute xl:top-[493px] xl:left-[15px] xl:order-none xl:w-[496px] xl:gap-0">
@@ -79,11 +78,11 @@ export default function Hero() {
 
         <div className="order-6 flex w-full flex-col items-start gap-4 sm:flex-row sm:items-center xl:absolute xl:top-[771px] xl:left-[18px] xl:order-none xl:h-[88px] xl:w-auto xl:flex-row xl:items-center xl:gap-[19px]">
           <a
-            href="#lead-form"
+            href="#branding-solutions"
             className="flex w-full items-center justify-center rounded-[8px] bg-[#1C304B] px-6 py-4 transition-colors hover:bg-[#142539] sm:w-auto sm:px-8 xl:h-[88px] xl:w-[347px] xl:px-[31px] xl:py-[12px]"
           >
             <span className="font-[family-name:var(--font-poppins)] text-base font-bold text-white sm:text-lg xl:text-[20px]">
-              GET MY BRANDING KIT
+              See How We Can Help
             </span>
           </a>
 

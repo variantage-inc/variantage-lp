@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Fragment } from "react";
 
-const CITIES = ["Toronto", "Markham", "Whitby", "Saskatchewan", "Other Cities"];
+const CITIES = ["Whitby", "Ajax", "Pickering", "Oshawa", "Other Cities"];
 
 export default function HelpingLocals() {
   return (
