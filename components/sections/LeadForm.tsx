@@ -53,17 +53,13 @@ export default function LeadForm() {
       */}
       <div className="relative mx-auto flex max-w-[1440px] flex-col gap-10 px-5 py-14 sm:gap-12 sm:px-6 sm:py-16 md:gap-14 md:px-8 md:py-20 lg:gap-16 lg:px-10 lg:py-24 min-[1440px]:block min-[1440px]:h-[1853px] min-[1440px]:px-0 min-[1440px]:py-0">
         <h2 className="font-[family-name:var(--font-poppins)] text-[30px] leading-[1.15] font-light tracking-[-0.6px] text-[#C01F25] sm:text-[34px] md:text-[44px] md:tracking-[-1px] lg:text-[52px] lg:leading-[1.1] lg:tracking-[-1.4px] min-[1440px]:absolute min-[1440px]:top-[84px] min-[1440px]:left-[108px] min-[1440px]:w-[827px] min-[1440px]:text-[61px] min-[1440px]:leading-[1.075] min-[1440px]:tracking-[-1.83px]">
-          <span className="block">Unlock a personalized brand </span>
-          <span className="block">evaluation from Variantage.</span>
+          <span className="block">See What's Holding Your Business Back Online</span>
+     
         </h2>
 
         <p className="font-[family-name:var(--font-poppins)] text-[16px] leading-[24px] font-normal tracking-[-0.3px] text-black sm:text-[18px] sm:leading-[27px] md:text-[22px] md:leading-[30px] lg:text-[26px] lg:leading-[34px] lg:tracking-[-0.6px] min-[1440px]:absolute min-[1440px]:top-[240px] min-[1440px]:left-[115px] min-[1440px]:w-[963px] min-[1440px]:text-[30px] min-[1440px]:leading-[32px] min-[1440px]:tracking-[-0.9px]">
           <span className="block">
-            We&apos;ll analyze your digital footprint and provide a clear,
-            expert-driven{" "}
-          </span>
-          <span className="block">
-            plan to strengthen your branding and marketing performance.
+            Complete the form below to receive a personalized review of your branding, website, and digital marketing. We'll identify missed opportunities and show you practical ways to attract more customers.
           </span>
         </p>
 
