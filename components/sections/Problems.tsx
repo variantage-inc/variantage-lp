@@ -10,9 +10,9 @@ const PROBLEMS = [
 export default function Problems() {
   return (
     <section id="problems" className="w-full">
-      <div className="relative flex w-full flex-col bg-[linear-gradient(45deg,_#09182B_0%,_#112C4E_100%)] lg:block lg:min-h-[970px]">
+      <div className="relative flex w-full flex-col bg-[linear-gradient(45deg,_#09182B_0%,_#112C4E_100%)] lg:block lg:min-h-[650px] lg:overflow-hidden">
         <div className="relative z-10 order-2 mx-auto max-w-[1440px] px-5 sm:px-6 md:px-8 lg:order-none lg:pl-10 lg:pr-0">
-          <div className="flex flex-col pt-8 pb-8 sm:pt-9 sm:pb-9 md:pt-10 md:pb-10 lg:pt-[47px] lg:pb-[110px]">
+          <div className="flex flex-col pt-8 pb-8 sm:pt-9 sm:pb-9 md:pt-10 md:pb-10 lg:pt-[47px] lg:pb-[56px]">
             <p className="max-w-full font-[family-name:var(--font-poppins)] text-[22px] font-light leading-[30px] tracking-[-0.5px] text-[#ADD6FF] sm:text-[25px] sm:leading-[33px] md:text-[28px] md:leading-[36px] md:tracking-[-0.8px] lg:w-[694px] lg:max-w-none lg:text-[39.411px] lg:leading-[47px] lg:tracking-[-1.1823px]">
               If you’ve ever felt lost or overwhelmed with social media and
               online marketing, you’re not alone, most small businesses feel
@@ -41,7 +41,7 @@ export default function Problems() {
           alt="happy man with variantage"
           width={950}
           height={970}
-          className="order-1 mx-auto h-auto w-[65vw] max-w-[320px] sm:max-w-[360px] md:max-w-[400px] lg:order-none lg:absolute lg:right-0 lg:bottom-[-40px] lg:z-0 lg:mx-0 lg:h-auto lg:w-[950px] lg:max-w-none"
+          className="order-1 mx-auto h-auto w-[65vw] max-w-[320px] sm:max-w-[360px] md:max-w-[400px] lg:order-none lg:absolute lg:right-0 lg:top-[40px] lg:z-0 lg:mx-0 lg:h-auto lg:w-[950px] lg:max-w-none"
         />
       </div>
 

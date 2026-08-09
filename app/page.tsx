@@ -12,8 +12,13 @@ import Footer from "@/components/layout/Footer";
 export default function Home() {
   return (
     <main>
-      <Header />
-      <Hero />
+      <div
+        className="relative w-full bg-[#E2F4FF] bg-cover bg-top bg-no-repeat"
+        style={{ backgroundImage: "url('/images/122.webp')" }}
+      >
+        <Header />
+        <Hero />
+      </div>
       <HelpingLocals />
       <Problems />
       <BrandingSolutions />

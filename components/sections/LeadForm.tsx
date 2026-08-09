@@ -83,7 +83,7 @@ export default function LeadForm() {
      
         </h2>
 
-        <p className="font-[family-name:var(--font-poppins)] text-[16px] leading-[24px] font-normal tracking-[-0.3px] text-black sm:text-[18px] sm:leading-[27px] md:text-[22px] md:leading-[30px] lg:text-[26px] lg:leading-[34px] lg:tracking-[-0.6px] min-[1440px]:absolute min-[1440px]:top-[240px] min-[1440px]:left-[115px] min-[1440px]:w-[963px] min-[1440px]:text-[30px] min-[1440px]:leading-[32px] min-[1440px]:tracking-[-0.9px]">
+        <p className="mb-[25px] font-[family-name:var(--font-poppins)] text-[16px] leading-[24px] font-normal tracking-[-0.3px] text-black sm:text-[18px] sm:leading-[27px] md:text-[22px] md:leading-[30px] lg:text-[26px] lg:leading-[34px] lg:tracking-[-0.6px] min-[1440px]:absolute min-[1440px]:top-[240px] min-[1440px]:left-[115px] min-[1440px]:w-[963px] min-[1440px]:text-[30px] min-[1440px]:leading-[32px] min-[1440px]:tracking-[-0.9px]">
           <span className="block">
             Complete the form below to receive a personalized review of your branding, website, and digital marketing. We'll identify missed opportunities and show you practical ways to attract more customers.
           </span>

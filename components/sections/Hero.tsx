@@ -45,7 +45,7 @@ export default function Hero() {
   const slideWidthPercent = 100 / GALLERY_IMAGES.length;
 
   return (
-    <section id="hero" className="relative w-full bg-[#E2F4FF]">
+    <section id="hero" className="relative w-full">
       <div className="relative mx-auto flex w-full max-w-[1440px] flex-col gap-8 px-5 py-14 sm:gap-10 sm:px-8 sm:py-16 md:px-12 md:py-20 lg:px-16 xl:block xl:h-[959px] xl:gap-0 xl:px-0 xl:py-0">
         <p className="order-1 font-[family-name:var(--font-poppins)] text-sm leading-normal font-normal tracking-[-0.3px] text-[#C01F25] uppercase sm:text-base md:text-lg xl:absolute xl:top-[25px] xl:left-[13px] xl:order-none xl:text-[24px] xl:leading-[73px] xl:tracking-[-0.72px]">
           FOR SMALL BUSINESSES ACROSS ONTARIO
@@ -59,7 +59,7 @@ export default function Hero() {
           Everything your business needs to build a stronger brand online from professional branding and websites to a polished digital presence that earns trust and attracts more customers.
         </p>
 
-        <ul className="order-5 flex w-full flex-col gap-1 xl:absolute xl:top-[493px] xl:left-[15px] xl:order-none xl:w-[496px] xl:gap-0">
+        <ul className="order-5 flex w-full flex-col gap-1 xl:absolute xl:top-[520px] xl:left-[15px] xl:order-none xl:w-[496px] xl:gap-0">
           {CHECKLIST_ITEMS.map((item) => (
             <li key={item} className="flex items-center gap-3 py-2 sm:gap-4 xl:h-[63px] xl:gap-[26px] xl:py-0">
               <Image
