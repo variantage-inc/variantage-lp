@@ -42,7 +42,7 @@ const INDUSTRIES = [
 export default function Industries() {
   return (
     <section id="industries" className="w-full bg-[#e5fbff]">
-      <div className="mx-auto flex max-w-[1440px] flex-col items-center px-5 pb-16 sm:px-6 md:px-8 md:pb-24 lg:px-10 lg:pb-[380px]">
+      <div className="mx-auto flex max-w-[1440px] flex-col items-center px-5 pb-16 sm:px-6 md:px-8 md:pb-24 lg:px-10 lg:pb-[80px]">
         <h2 className="mt-8 font-[family-name:var(--font-poppins)] text-center text-[#1C304B] tracking-[-0.5px] md:mt-12 md:tracking-[-0.8px] lg:mt-[63px] lg:tracking-[-1.08px]">
           <span className="block text-[22px] font-normal leading-snug md:text-[28px] md:leading-normal lg:text-[36px] lg:leading-normal">
             We’re Expert

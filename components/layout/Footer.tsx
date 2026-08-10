@@ -128,7 +128,7 @@ export default function Footer() {
         </div>
 
         {/* Bottom bar */}
-        <div className="border-t border-white/10 pt-8 md:mt-5 lg:mt-5">
+        <div className="border-t border-white/10 pt-8 mt-5">
           <p className="text-center text-[13px] font-normal tracking-[-0.2px] text-white/45 lg:text-left">
             &copy; 2026 Variantage Incorporation. All Rights Reserved.
           </p>

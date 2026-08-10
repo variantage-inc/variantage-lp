@@ -5,6 +5,9 @@ import { useState, type FormEvent } from "react";
 const RADIO_CLASS =
   "size-[28px] shrink-0 appearance-none rounded-full border-2 border-black bg-white outline-none checked:border-[7px] checked:border-[#C01F25]";
 
+const CHECKBOX_CLASS =
+  "size-[28px] shrink-0 appearance-none rounded-[5px] border-2 border-black bg-white outline-none checked:bg-[#C01F25]";
+
 type SubmitStatus = "idle" | "success" | "error";
 
 export default function LeadForm() {
@@ -87,43 +90,41 @@ export default function LeadForm() {
             </label>
           </p>
 
-          <h3 className="font-[family-name:var(--font-poppins)] text-[20px] leading-[26px] font-bold tracking-[-0.4px] text-[#C01F25] sm:text-[22px] md:text-[26px] lg:text-[28px] lg:tracking-[-0.7px] min-[1440px]:absolute min-[1440px]:top-[341px] min-[1440px]:left-[121px] min-[1440px]:text-[30px] min-[1440px]:leading-[32px] min-[1440px]:tracking-[-0.9px]">
+          <h3 className="font-[family-name:var(--font-poppins)] text-[20px] leading-[26px] font-bold tracking-[-0.4px] text-[#C01F25] sm:text-[22px] md:text-[26px] lg:text-[28px] lg:tracking-[-0.7px] min-[1440px]:absolute min-[1440px]:top-[351px] min-[1440px]:left-[121px] min-[1440px]:text-[30px] min-[1440px]:leading-[32px] min-[1440px]:tracking-[-0.9px]">
             Contact Details
           </h3>
-
-          <label className="flex w-full flex-col gap-2 rounded-[16px] bg-white px-5 py-4 shadow-[0px_0px_5px_0px_rgba(0,0,0,0.25)] sm:px-6 sm:py-5 lg:gap-3 lg:px-8 lg:py-6 min-[1440px]:absolute min-[1440px]:top-[399px] min-[1440px]:left-[115px] min-[1440px]:h-[73px] min-[1440px]:w-[600px] min-[1440px]:flex-row min-[1440px]:items-center min-[1440px]:gap-[10px] min-[1440px]:px-0 min-[1440px]:py-0 min-[1440px]:pl-[29px] min-[1440px]:pr-[24px]">
+            
+          <label className="flex w-full flex-col gap-2 lg:gap-3 min-[1440px]:absolute min-[1440px]:top-[399px] min-[1440px]:left-[115px] min-[1440px]:h-[73px] min-[1440px]:w-[600px] min-[1440px]:flex-row min-[1440px]:items-center min-[1440px]:gap-[10px] min-[1440px]:px-0 min-[1440px]:py-0 min-[1440px]:pr-[24px]">
             <span className="shrink-0 font-[family-name:var(--font-poppins)] text-[16px] leading-[22px] tracking-[-0.3px] text-black sm:text-[18px] md:text-[20px] lg:text-[24px] min-[1440px]:text-[27px] min-[1440px]:leading-[32px] min-[1440px]:tracking-[-0.81px]">
               Full Name<span className="text-[#C01F25]">*</span>
             </span>
             <input
               type="text"
               name="fullName"
-              className="h-[52px] w-full min-w-0 rounded-[10px] border border-[#E3E3E3] bg-transparent px-4 font-[family-name:var(--font-poppins)] text-[16px] tracking-[-0.3px] text-black outline-none sm:h-[56px] sm:text-[18px] md:text-[20px] lg:h-[60px] lg:text-[24px] min-[1440px]:h-full min-[1440px]:flex-1 min-[1440px]:rounded-none min-[1440px]:border-0 min-[1440px]:px-0 min-[1440px]:text-[27px] min-[1440px]:tracking-[-0.81px]"
+              className="h-[52px] w-full min-w-0 rounded-[10px] border border-[#E3E3E3] bg-white px-4 font-[family-name:var(--font-poppins)] text-[16px] tracking-[-0.3px] text-black shadow-[0px_0px_3px_0px_rgba(0,0,0,0.25)] outline-none sm:h-[56px] sm:text-[18px] md:text-[20px] lg:h-[60px] lg:text-[24px] min-[1440px]:h-full min-[1440px]:flex-1 min-[1440px]:rounded-[16px] min-[1440px]:border-0 min-[1440px]:px-[24px] min-[1440px]:text-[27px] min-[1440px]:tracking-[-0.81px]"
             />
           </label>
 
-          <label className="flex w-full flex-col gap-2 rounded-[16px] bg-white px-5 py-4 shadow-[0px_0px_5px_0px_rgba(0,0,0,0.25)] sm:px-6 sm:py-5 lg:gap-3 lg:px-8 lg:py-6 min-[1440px]:absolute min-[1440px]:top-[399px] min-[1440px]:left-[732px] min-[1440px]:h-[73px] min-[1440px]:w-[600px] min-[1440px]:flex-row min-[1440px]:items-center min-[1440px]:gap-[10px] min-[1440px]:px-0 min-[1440px]:py-0 min-[1440px]:pl-[40px] min-[1440px]:pr-[24px]">
+          <label className="flex w-full flex-col gap-2 lg:gap-3 min-[1440px]:absolute min-[1440px]:top-[399px] min-[1440px]:left-[732px] min-[1440px]:h-[73px] min-[1440px]:w-[600px] min-[1440px]:flex-row min-[1440px]:items-center min-[1440px]:gap-[10px] min-[1440px]:px-0 min-[1440px]:py-0 min-[1440px]:pl-[40px] min-[1440px]:pr-[24px]">
             <span className="shrink-0 font-[family-name:var(--font-poppins)] text-[16px] leading-[22px] tracking-[-0.3px] text-black sm:text-[18px] md:text-[20px] lg:text-[24px] min-[1440px]:text-[27px] min-[1440px]:leading-[32px] min-[1440px]:tracking-[-0.81px]">
               Contact No.<span className="text-[#C01F25]">*</span>{" "}
-              <span className="text-[13px] text-[#A6A6A6] sm:text-[14px] lg:text-[18px] min-[1440px]:text-[21px]">
-                (numbers only)
-              </span>
             </span>
             <input
               type="tel"
               name="contactNumber"
-              className="h-[52px] w-full min-w-0 rounded-[10px] border border-[#E3E3E3] bg-transparent px-4 font-[family-name:var(--font-poppins)] text-[16px] tracking-[-0.3px] text-black outline-none sm:h-[56px] sm:text-[18px] md:text-[20px] lg:h-[60px] lg:text-[24px] min-[1440px]:h-full min-[1440px]:flex-1 min-[1440px]:rounded-none min-[1440px]:border-0 min-[1440px]:px-0 min-[1440px]:text-[27px] min-[1440px]:tracking-[-0.81px]"
+              placeholder="only numbers"
+              className="h-[52px] w-full min-w-0 rounded-[10px] border border-[#E3E3E3] bg-white px-4 font-[family-name:var(--font-poppins)] text-[16px] tracking-[-0.3px] text-black shadow-[0px_0px_3px_0px_rgba(0,0,0,0.25)] outline-none sm:h-[56px] sm:text-[18px] md:text-[20px] lg:h-[60px] lg:text-[24px] min-[1440px]:h-full min-[1440px]:flex-1 min-[1440px]:rounded-[16px] min-[1440px]:border-0 min-[1440px]:px-[24px] min-[1440px]:text-[27px] min-[1440px]:tracking-[-0.81px]"
             />
           </label>
 
-          <label className="flex w-full flex-col gap-2 rounded-[16px] bg-white px-5 py-4 shadow-[0px_0px_5px_0px_rgba(0,0,0,0.25)] sm:px-6 sm:py-5 lg:gap-3 lg:px-8 lg:py-6 min-[1440px]:absolute min-[1440px]:top-[499px] min-[1440px]:left-[115px] min-[1440px]:h-[73px] min-[1440px]:w-[1217px] min-[1440px]:flex-row min-[1440px]:items-center min-[1440px]:gap-[10px] min-[1440px]:px-0 min-[1440px]:py-0 min-[1440px]:pl-[29px] min-[1440px]:pr-[24px]">
+          <label className="flex w-full flex-col gap-2 lg:gap-3 min-[1440px]:absolute min-[1440px]:top-[499px] min-[1440px]:left-[115px] min-[1440px]:h-[73px] min-[1440px]:w-[1217px] min-[1440px]:flex-row min-[1440px]:items-center min-[1440px]:gap-[10px] min-[1440px]:px-0 min-[1440px]:py-0 min-[1440px]:pr-[24px]">
             <span className="shrink-0 font-[family-name:var(--font-poppins)] text-[16px] leading-[22px] tracking-[-0.3px] text-black sm:text-[18px] md:text-[20px] lg:text-[24px] min-[1440px]:text-[27px] min-[1440px]:leading-[32px] min-[1440px]:tracking-[-0.81px]">
               Email Address<span className="text-[#C01F25]">*</span>
             </span>
             <input
               type="email"
               name="email"
-              className="h-[52px] w-full min-w-0 rounded-[10px] border border-[#E3E3E3] bg-transparent px-4 font-[family-name:var(--font-poppins)] text-[16px] tracking-[-0.3px] text-black outline-none sm:h-[56px] sm:text-[18px] md:text-[20px] lg:h-[60px] lg:text-[24px] min-[1440px]:h-full min-[1440px]:flex-1 min-[1440px]:rounded-none min-[1440px]:border-0 min-[1440px]:px-0 min-[1440px]:text-[27px] min-[1440px]:tracking-[-0.81px]"
+              className="h-[52px] w-full min-w-0 rounded-[10px] border border-[#E3E3E3] bg-white px-4 font-[family-name:var(--font-poppins)] text-[16px] tracking-[-0.3px] text-black shadow-[0px_0px_3px_0px_rgba(0,0,0,0.25)] outline-none sm:h-[56px] sm:text-[18px] md:text-[20px] lg:h-[60px] lg:text-[24px] min-[1440px]:h-full min-[1440px]:flex-1 min-[1440px]:rounded-[16px] min-[1440px]:border-0 min-[1440px]:px-[24px] min-[1440px]:text-[27px] min-[1440px]:tracking-[-0.81px]"
             />
           </label>
 
@@ -131,14 +132,14 @@ export default function LeadForm() {
             Business Information
           </h3>
 
-          <label className="flex w-full flex-col gap-2 rounded-[16px] bg-white px-5 py-4 shadow-[0px_0px_5px_0px_rgba(0,0,0,0.25)] sm:px-6 sm:py-5 lg:gap-3 lg:px-8 lg:py-6 min-[1440px]:absolute min-[1440px]:top-[679px] min-[1440px]:left-[121px] min-[1440px]:h-[73px] min-[1440px]:w-[1211px] min-[1440px]:flex-row min-[1440px]:items-center min-[1440px]:gap-[10px] min-[1440px]:px-0 min-[1440px]:py-0 min-[1440px]:pl-[29px] min-[1440px]:pr-[24px]">
+          <label className="flex w-full flex-col gap-2 lg:gap-3 min-[1440px]:absolute min-[1440px]:top-[679px] min-[1440px]:left-[121px] min-[1440px]:h-[73px] min-[1440px]:w-[1211px] min-[1440px]:flex-row min-[1440px]:items-center min-[1440px]:gap-[10px] min-[1440px]:px-0 min-[1440px]:py-0 min-[1440px]:pr-[24px]">
             <span className="shrink-0 font-[family-name:var(--font-poppins)] text-[16px] leading-[22px] tracking-[-0.3px] text-black sm:text-[18px] md:text-[20px] lg:text-[24px] min-[1440px]:text-[27px] min-[1440px]:leading-[32px] min-[1440px]:tracking-[-0.81px]">
               Business Name
             </span>
             <input
               type="text"
               name="businessName"
-              className="h-[52px] w-full min-w-0 rounded-[10px] border border-[#E3E3E3] bg-transparent px-4 font-[family-name:var(--font-poppins)] text-[16px] tracking-[-0.3px] text-black outline-none sm:h-[56px] sm:text-[18px] md:text-[20px] lg:h-[60px] lg:text-[24px] min-[1440px]:h-full min-[1440px]:flex-1 min-[1440px]:rounded-none min-[1440px]:border-0 min-[1440px]:px-0 min-[1440px]:text-[27px] min-[1440px]:tracking-[-0.81px]"
+              className="h-[52px] w-full min-w-0 rounded-[10px] border border-[#E3E3E3] bg-white px-4 font-[family-name:var(--font-poppins)] text-[16px] tracking-[-0.3px] text-black shadow-[0px_0px_3px_0px_rgba(0,0,0,0.25)] outline-none sm:h-[56px] sm:text-[18px] md:text-[20px] lg:h-[60px] lg:text-[24px] min-[1440px]:h-full min-[1440px]:flex-1 min-[1440px]:rounded-[16px] min-[1440px]:border-0 min-[1440px]:px-[24px] min-[1440px]:text-[27px] min-[1440px]:tracking-[-0.81px]"
             />
           </label>
 
@@ -163,10 +164,13 @@ export default function LeadForm() {
           </label>
 
           <input
-            type="url"
+            type="text"
+            inputMode="url"
             name="websiteUrl"
             aria-label="Current website address"
-            className="h-[52px] w-full rounded-[10px] border border-[#E3E3E3] bg-white px-4 font-[family-name:var(--font-poppins)] text-[16px] text-black shadow-[0px_0px_5px_0px_rgba(0,0,0,0.25)] outline-none sm:h-[56px] sm:text-[18px] lg:h-[60px] min-[1440px]:absolute min-[1440px]:top-[838px] min-[1440px]:left-[818px] min-[1440px]:h-[73px] min-[1440px]:w-[514px] min-[1440px]:rounded-[16px] min-[1440px]:border-0 min-[1440px]:px-[24px] min-[1440px]:text-[27px]"
+            pattern="(https?://)?(www\.)?[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)+(:[0-9]+)?(/\S*)?"
+            title="Enter a website address, e.g. example.com or https://example.com"
+            className="h-[52px] w-full rounded-[10px] border border-[#E3E3E3] bg-white px-4 font-[family-name:var(--font-poppins)] text-[16px] text-black shadow-[0px_0px_3px_0px_rgba(0,0,0,0.25)] outline-none sm:h-[56px] sm:text-[18px] lg:h-[60px] min-[1440px]:absolute min-[1440px]:top-[838px] min-[1440px]:left-[818px] min-[1440px]:h-[73px] min-[1440px]:w-[514px] min-[1440px]:rounded-[16px] min-[1440px]:border-0 min-[1440px]:px-[24px] min-[1440px]:text-[27px]"
           />
 
           <label className="flex items-center gap-3 font-[family-name:var(--font-poppins)] text-[15px] leading-[20px] tracking-[-0.3px] text-black sm:text-[17px] lg:gap-4 lg:text-[24px] min-[1440px]:absolute min-[1440px]:top-[911px] min-[1440px]:left-[117px] min-[1440px]:gap-[19px] min-[1440px]:text-[30px] min-[1440px]:leading-[32px] min-[1440px]:tracking-[-0.9px]">
@@ -195,7 +199,7 @@ export default function LeadForm() {
           <textarea
             name="businessDescription"
             aria-label="What does your business do?"
-            className="h-[140px] w-full resize-none rounded-[16px] border border-[#E3E3E3] bg-white p-4 font-[family-name:var(--font-poppins)] text-[15px] text-black shadow-[0px_0px_5px_0px_rgba(0,0,0,0.25)] outline-none sm:h-[160px] sm:p-5 sm:text-[16px] lg:h-[180px] lg:text-[18px] min-[1440px]:absolute min-[1440px]:top-[1096px] min-[1440px]:left-[123px] min-[1440px]:h-[154px] min-[1440px]:w-[1209px] min-[1440px]:border-0 min-[1440px]:p-[24px] min-[1440px]:text-[20px]"
+            className="h-[140px] w-full resize-none rounded-[16px] border border-[#E3E3E3] bg-white p-4 font-[family-name:var(--font-poppins)] text-[15px] text-black shadow-[0px_0px_3px_0px_rgba(0,0,0,0.25)] outline-none sm:h-[160px] sm:p-5 sm:text-[16px] lg:h-[180px] lg:text-[18px] min-[1440px]:absolute min-[1440px]:top-[1096px] min-[1440px]:left-[123px] min-[1440px]:h-[154px] min-[1440px]:w-[1209px] min-[1440px]:border-0 min-[1440px]:p-[24px] min-[1440px]:text-[20px]"
           />
 
           <p className="font-[family-name:var(--font-poppins)] text-[18px] leading-[26px] font-semibold tracking-[-0.4px] text-black sm:text-[20px] md:text-[24px] lg:text-[27px] min-[1440px]:absolute min-[1440px]:top-[1320px] min-[1440px]:left-[121px] min-[1440px]:text-[30px] min-[1440px]:leading-[32px] min-[1440px]:tracking-[-0.9px]">
@@ -205,28 +209,28 @@ export default function LeadForm() {
           <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap sm:gap-8 min-[1440px]:absolute min-[1440px]:top-[1383px] min-[1440px]:left-[121px] min-[1440px]:flex-row min-[1440px]:flex-nowrap min-[1440px]:items-center min-[1440px]:gap-[64px]">
             <label className="flex items-center gap-[10px] font-[family-name:var(--font-poppins)] text-[16px] leading-[22px] font-semibold tracking-[-0.4px] text-black sm:text-[18px] md:text-[22px] lg:text-[26px] min-[1440px]:gap-[16px] min-[1440px]:text-[30px] min-[1440px]:leading-[32px] min-[1440px]:tracking-[-0.9px]">
               <input
-                type="radio"
+                type="checkbox"
                 name="contactMethod"
                 value="phone"
-                className={RADIO_CLASS}
+                className={CHECKBOX_CLASS}
               />
               Phone Call
             </label>
             <label className="flex items-center gap-[10px] font-[family-name:var(--font-poppins)] text-[16px] leading-[22px] font-semibold tracking-[-0.4px] text-black sm:text-[18px] md:text-[22px] lg:text-[26px] min-[1440px]:gap-[16px] min-[1440px]:text-[30px] min-[1440px]:leading-[32px] min-[1440px]:tracking-[-0.9px]">
               <input
-                type="radio"
+                type="checkbox"
                 name="contactMethod"
                 value="whatsapp"
-                className={RADIO_CLASS}
+                className={CHECKBOX_CLASS}
               />
               WhatsApp
             </label>
             <label className="flex items-center gap-[10px] font-[family-name:var(--font-poppins)] text-[16px] leading-[22px] font-semibold tracking-[-0.4px] text-black sm:text-[18px] md:text-[22px] lg:text-[26px] min-[1440px]:gap-[16px] min-[1440px]:text-[30px] min-[1440px]:leading-[32px] min-[1440px]:tracking-[-0.9px]">
               <input
-                type="radio"
+                type="checkbox"
                 name="contactMethod"
                 value="email"
-                className={RADIO_CLASS}
+                className={CHECKBOX_CLASS}
               />
               Email
             </label>
