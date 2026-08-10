@@ -46,7 +46,7 @@ export default function Hero() {
 
   return (
     <section id="hero" className="relative w-full">
-      <div className="relative mx-auto flex w-full max-w-[1440px] flex-col gap-8 px-5 py-14 sm:gap-10 sm:px-8 sm:py-16 md:px-12 md:py-20 lg:px-16 xl:block xl:h-[959px] xl:gap-0 xl:px-0 xl:py-0">
+      <div className="relative mx-auto flex w-full max-w-[1440px] flex-col gap-3 px-5 py-14 sm:gap-10 sm:px-8 sm:py-16 md:px-12 md:py-20 lg:px-16 xl:block xl:h-[959px] xl:gap-0 xl:px-0 xl:py-0">
         <p className="order-1 font-[family-name:var(--font-poppins)] text-sm leading-normal font-normal tracking-[-0.3px] text-[#C01F25] uppercase sm:text-base md:text-lg xl:absolute xl:top-[25px] xl:left-[13px] xl:order-none xl:text-[24px] xl:leading-[73px] xl:tracking-[-0.72px]">
           FOR SMALL BUSINESSES ACROSS ONTARIO
         </p>
@@ -86,13 +86,15 @@ export default function Hero() {
             </span>
           </a>
 
-          <Image
-            src="/images/google-five-rating.png"
-            alt="Google Rating 5.0 stars"
-            width={275}
-            height={88}
-            className="h-auto w-auto max-w-[275px] rounded-[4.971px] object-cover"
-          />
+          <div className="flex w-full justify-center lg:justify-start">
+            <Image
+              src="/images/google-five-rating.png"
+              alt="Google Rating 5.0 stars"
+              width={275}
+              height={88}
+              className="h-auto w-auto max-w-[275px] rounded-[4.971px] object-cover"
+            />
+        </div>
         </div>
 
         <div className="order-4 relative aspect-[726/480] w-full overflow-hidden rounded-[18.15px] xl:absolute xl:top-[273px] xl:left-[704px] xl:order-none xl:aspect-auto xl:h-[480.068px] xl:w-[726px]">

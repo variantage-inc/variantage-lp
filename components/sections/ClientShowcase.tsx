@@ -67,7 +67,7 @@ export default function ClientShowcase() {
                 href={client.website}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-center gap-1 bg-[#F5F5F5] py-2 text-xs font-medium text-[#1C304B] transition-colors duration-300 hover:bg-[#C11F24] hover:text-white"
+                className="group flex items-center justify-center gap-1 bg-[#BDE3F6] py-2 text-xs font-medium text-[#1C304B] transition-colors duration-300 hover:bg-[#C11F24] hover:text-white"
               >
                 Visit Website
                 <span className="transition-transform duration-300 group-hover:translate-x-[4px]">

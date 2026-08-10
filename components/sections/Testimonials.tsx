@@ -134,7 +134,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section id="testimonials" className="w-full bg-[#ECF8FA]">
+    <section id="testimonials" className="w-full bg-[#BDE3F6]">
       <div className="mx-auto max-w-[1440px] px-5 pt-[100px] pb-[100px] md:px-8 lg:px-10">
         <h2 className="text-center font-[family-name:var(--font-poppins)] text-[39px] leading-[58px] font-bold tracking-[-1.17px] text-[#142539]">
           Why Local Businesses Rate Us 5 Stars

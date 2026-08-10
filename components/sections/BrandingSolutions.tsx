@@ -56,7 +56,7 @@ export default function BrandingSolutions() {
           </span>
         </h2>
 
-        <ul className="mt-10 grid w-full grid-cols-1 gap-y-10 md:mt-14 md:grid-cols-2 md:gap-x-8 md:gap-y-12 lg:mt-[88px] lg:flex lg:gap-0 lg:items-start lg:justify-between">
+        <ul className="mt-10 grid w-full grid-cols-1 gap-y-8 md:mt-14 md:grid-cols-2 md:gap-x-8 md:gap-y-12 lg:mt-[88px] lg:flex lg:items-start lg:justify-between lg:gap-0">
           {SOLUTIONS.map((solution) => (
             <li
               key={solution.title}
@@ -71,13 +71,10 @@ export default function BrandingSolutions() {
                   className="mix-blend-multiply h-auto w-14 sm:w-16 md:w-20 lg:h-auto lg:w-auto"
                 />
               </div>
-              <h3 className="mt-2 font-[family-name:var(--font-poppins)] text-[18px] font-bold leading-normal tracking-[-0.4px] text-[#C01F25] md:text-[20px] md:tracking-[-0.5px] lg:mt-[9px] lg:text-[24px] lg:tracking-[-0.72px]">
+              <h3 className="mt-2 font-[family-name:var(--font-poppins)] text-[21px] font-bold leading-normal tracking-[-0.4px] text-[#C01F25] md:text-[20px] md:tracking-[-0.5px] lg:mt-[9px] lg:text-[24px] lg:tracking-[-0.72px]">
                 {solution.title}
               </h3>
-              <p
-                className="mt-3 max-w-full font-[family-name:var(--font-poppins)] text-[14px] font-normal leading-normal tracking-[-0.3px] text-black md:text-[15px] md:tracking-[-0.4px] lg:mt-[23px] lg:text-[17px] lg:tracking-[-0.51px]"
-                style={{ width: solution.descriptionWidth }}
-              >
+              <p className="mt-3 w-[88%] max-w-[320px] font-[family-name:var(--font-poppins)] text-[16px] font-normal leading-[1.45] tracking-[-0.3px] text-black md:w-auto md:text-[15px] md:tracking-[-0.4px] lg:mt-[23px] lg:max-w-none lg:text-[17px] lg:tracking-[-0.51px]">
                 {solution.description}
               </p>
             </li>
